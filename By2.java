@@ -41,9 +41,11 @@ class SeriesDemo {
 	public static void main(String[] args) {
 		By2 by2 = new By2();
 		By3 by3 = new By3();
+		Series s;
+		s = by2;
 		System.out.println("Последовательность \" через 2 \": ");
 		for (int i = 0;i<5;i++){
-			System.out.print(by2.getNext() + " ");
+			System.out.print(s.getNext() + " ");
 			}
 		System.out.println();
 		System.out.println("вывод предыдущих через 2");
@@ -55,24 +57,53 @@ class SeriesDemo {
 
 
 		//Сброс последовательности к нулю
-		by2.reset();
+		s.reset();
 		
 		System.out.println("Последовательность \" через 2 \": после сброса в 0");
                 for (int i = 0;i<5;i++)
 		{
-                        System.out.print(by2.getNext() + " ");
+                        System.out.print(s.getNext() + " ");
 			
 		}
                 System.out.println();
 		
 		//Новое стартовое значение 51
-		by2.setStart(51);
+		s.setStart(51);
 	        System.out.println("Последовательность \" через 2 \": после установки стартового значения в 51 ");
                 for (int i = 0;i<5;i++)
 		{
-                        System.out.print(by2.getNext() + " ");
+                        System.out.print(s.getNext() + " ");
 		}
 		System.out.println();
 
+		s = by3;
+                System.out.println("Последовательность \" через 2 \": ");
+                for (int i = 0;i<5;i++){
+                        System.out.print(s.getNext() + " ");
+                        }
+                System.out.println();
+                System.out.println("вывод предыдущих через 2");
+                System.out.println();
+
+                //Сброс последовательности к нулю
+                s.reset();
+
+                System.out.println("Последовательность \" через 2 \": после сброса в 0");
+                for (int i = 0;i<5;i++)
+                {
+                        System.out.print(s.getNext() + " ");
+
+                }
+                System.out.println();
+
+                //Новое стартовое значение 51
+                s.setStart(51);
+		System.out.println("Последовательность \" через 2 \": после установки стартового значения в 51 ");
+                for (int i = 0;i<5;i++)
+                {
+                        System.out.print(s.getNext() + " ");
+                }
+                System.out.println();
 	}
+
 }
